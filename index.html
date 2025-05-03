@@ -4,256 +4,288 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
-    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-color: #f5f5f5;
+      }
+      .neu-border {
+        border: 3px solid #111111;
+      }
+      .nav-line.active {
+        background-color: #FF5252;
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <header class="lg:fixed bg-white z-50 right-0 lg:left-0 lg:top-0 lg:py-5 lg:px-10">
-      <div class="menu absolute lg:hidden p-3 md:p-4 hover:bg-cyan-400 rounded-sm cursor-pointer z-50">
-        <i class="fa-solid fa-bars fa-2xl"></i>
-      </div>
-      <div
-        id="menuMobile"
-        class="flex -ms-72 md:-ms-[600px] md:text-center lg:mx-0 flex-col md:flex-col lg:flex-row lg:justify-between lg:items-center w-2/3 h-screen lg:h-auto lg:w-full bg-slate-100/95 lg:bg-transparent lg:shadow-none shadow-md py-10 lg:py-0 lg:static lg:z-0 fixed z-50 transition-all duration-500"
-      >
-        <div class="close lg:hidden absolute top-0 right-0 p-3 hover:bg-cyan-400 rounded-sm">
-          <i class="fa-solid fa-xmark fa-2xl"></i>
+    <header class="fixed w-full bg-white z-50 right-0 left-0 top-0 py-4 px-4 neu-border border-b-4 border-black">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="menu lg:hidden p-3 bg-yellow-400 neu-border shadow-[5px_5px_0px_0px_#111111] cursor-pointer z-50">
+          <i class="fa-solid fa-bars fa-xl"></i>
         </div>
-        <p class="font-bold text-cyan-400 text-center py-2 md:text-xl lg:py-0 lg:text-start lg:block lg:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">Dimas Rafi</p>
-        <nav class="lg:block">
-          <ul class="lg:flex lg:justify-between text-slate-700 font-medium">
-            <li class="py-3 px-5 lg:py-0">
-              <a class="nav-line relative md:text-lg" href="#home">Home</a>
-            </li>
-            <li class="py-3 px-5 lg:py-0">
-              <a class="nav-line relative md:text-lg" href="#about">About</a>
-            </li>
-            <li class="py-3 px-5 lg:py-0">
-              <a class="nav-line relative md:text-lg" href="#myskills">My Skills</a>
-            </li>
-            <li class="py-3 px-5 lg:py-0">
-              <a class="nav-line relative md:text-lg" href="#myproject">My Project</a>
-            </li>
-            <li class="py-3 px-5 lg:py-0">
-              <a class="nav-line relative md:text-lg" href="#certificate">Certificate</a>
-            </li>
-          </ul>
-        </nav>
-        <a 
-          class="btn-contact md:text-lg lg:block text-center mx-4 lg:mx-0 lg:w-auto p-3 rounded-full font-medium text-slate-800 transition duration-200 ease-in-out border-2 hover:outline-offset-4 hover:border-cyan-400 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 hover:text-white"
-          href="https://drive.google.com/file/d/10-aZwkCA4Mi9k9nNqi8IxhR_OReFS6xz/view?usp=sharing" target="_blank"
-          >Download CV</a
+        <p class="font-bold text-2xl bg-red-500 text-white neu-border px-4 py-2 shadow-[5px_5px_0px_0px_#111111]">Dimas Rafi</p>
+        
+        <!-- Mobile Menu - Fixed positioning -->
+        <div
+          id="menuMobile"
+          class="fixed top-0 left-0 h-screen w-3/4 md:w-1/2 bg-white neu-border transform -translate-x-full lg:translate-x-0 lg:static lg:h-auto lg:w-auto lg:border-none transition-transform duration-300 ease-in-out z-40 p-6 lg:p-0"
         >
+          <div class="close lg:hidden absolute top-4 right-4 p-3 bg-yellow-400 neu-border shadow-[5px_5px_0px_0px_#111111]">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </div>
+          <nav class="lg:block mt-16 lg:mt-0">
+            <ul class="lg:flex lg:justify-between text-black font-medium space-y-6 lg:space-y-0 lg:space-x-4">
+              <li class="lg:py-0">
+                <a class="nav-line relative md:text-lg neu-border px-3 py-1 hover:bg-red-500 hover:text-white transition-colors block" href="#home">Home</a>
+              </li>
+              <li class="lg:py-0">
+                <a class="nav-line relative md:text-lg neu-border px-3 py-1 hover:bg-red-500 hover:text-white transition-colors block" href="#about">About</a>
+              </li>
+              <li class="lg:py-0">
+                <a class="nav-line relative md:text-lg neu-border px-3 py-1 hover:bg-red-500 hover:text-white transition-colors block" href="#myskills">Skills</a>
+              </li>
+              <li class="lg:py-0">
+                <a class="nav-line relative md:text-lg neu-border px-3 py-1 hover:bg-red-500 hover:text-white transition-colors block" href="#myproject">Projects</a>
+              </li>
+              <li class="lg:py-0">
+                <a class="nav-line relative md:text-lg neu-border px-3 py-1 hover:bg-red-500 hover:text-white transition-colors block" href="#certificate">Certificates</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <a 
+          class="btn-contact hidden lg:block neu-border bg-yellow-400 px-6 py-3 font-bold shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all"
+          href="https://drive.google.com/file/d/10-aZwkCA4Mi9k9nNqi8IxhR_OReFS6xz/view?usp=sharing" target="_blank"
+        >Download CV</a>
       </div>
     </header>
+    
     <main>
-      <section id="home" class="w-full relative lg:py-40 flex lg:flex-row-reverse flex-col items-center justify-center min-h-screen py-20">
+      <section id="home" class="w-full relative lg:py-40 flex lg:flex-row-reverse flex-col items-center justify-center min-h-screen py-32 bg-white">
         <div class="hero w-full lg:w-1/2 flex justify-center">
-          <img src="images/dimas-removebg-preview (1).png" alt="Dimas" class="rounded-full w-48 md:w-52 lg:w-72 h-auto bg-gradient-to-r from-blue-600 to-cyan-400" />
+          <img src="images/dimas-removebg-preview (1).png" alt="Dimas" class="rounded-full w-48 md:w-52 lg:w-72 h-auto neu-border border-4 p-2 bg-yellow-400 shadow-[8px_8px_0px_0px_#111111]" />
         </div>
-        <div class="text w-1/2 flex flex-col justify-center items-center py-5 md:py-14">
+        <div class="text w-full lg:w-1/2 flex flex-col justify-center items-center py-5 md:py-14">
           <div class="max-w-md flex flex-col items-center lg:items-start">
             <div class="flex items-center text-center lg:text-start">
-              <div>
-                <p class="text-lg md:text-2xl font-medium">Hi, I'm<br /><span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 text-2xl lg:text-3xl md:text-3xl">Muhammad Dimas Rafi</span></p>
-                <p class="text-lg md:text-2xl font-medium">I'm a <br /><span class="font-bold bg-clip-text text-transparent bg-gradient-to-l from-cyan-400 to-blue-600 text-2xl md:text-3xl lg:text-3xl"> Fullstack Developer </span></p>
+              <div class="neu-border p-6 bg-white shadow-[8px_8px_0px_0px_#111111]">
+                <p class="text-lg md:text-2xl font-medium">Hi, I'm<br /><span class="font-bold bg-red-500 text-white px-2 neu-border text-2xl lg:text-3xl md:text-3xl">Muhammad Dimas Rafi</span></p>
+                <p class="text-lg md:text-2xl font-medium mt-4">I'm a <br /><span class="font-bold bg-yellow-400 neu-border text-black px-2 text-2xl md:text-3xl lg:text-3xl"> Fullstack Developer </span></p>
               </div>
             </div>
             <ul class="flex justify-center items-center py-10">
               <li class="px-2">
-                <a href="https://wa.me/6282130869378" target="_blank">
-                  <i class="fa-brands fa-whatsapp fa-xl text-slate-800 hover:text-cyan-400 transition-colors"></i>
+                <a href="https://wa.me/6282130869378" target="_blank" class="block neu-border p-2 bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+                  <i class="fa-brands fa-whatsapp fa-xl text-black"></i>
                 </a>
               </li>
               <li class="px-2">
-                <a href="https://www.facebook.com/dimas.rafi.522066" target="_blank">
-                  <i class="fa-brands fa-facebook fa-xl text-slate-800 hover:text-cyan-400 transition-colors"></i>
+                <a href="https://www.facebook.com/dimas.rafi.522066" target="_blank" class="block neu-border p-2 bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+                  <i class="fa-brands fa-facebook fa-xl text-black"></i>
                 </a>
               </li>
               <li class="px-2">
-                <a href="https://www.instagram.com/dimass_rfyy/" target="_blank">
-                  <i class="fa-brands fa-instagram fa-xl text-slate-800 hover:text-cyan-400 transition-colors"></i>
+                <a href="https://www.instagram.com/dimass_rfyy/" target="_blank" class="block neu-border p-2 bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+                  <i class="fa-brands fa-instagram fa-xl text-black"></i>
                 </a>
               </li>
               <li class="px-2">
-                <a href="https://www.linkedin.com/in/muhammad-dimas-rafi" target="_blank">
-                  <i class="fa-brands fa-linkedin fa-xl text-slate-800 hover:text-cyan-400 transition-colors"></i>
+                <a href="https://www.linkedin.com/in/muhammad-dimas-rafi" target="_blank" class="block neu-border p-2 bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+                  <i class="fa-brands fa-linkedin fa-xl text-black"></i>
                 </a>
               </li>
               <li class="px-2">
-                <a href="https://github.com/DimassRfyy" target="_blank">
-                  <i class="fa-brands fa-github fa-xl text-slate-800 hover:text-cyan-400 transition-colors"></i>
+                <a href="https://github.com/DimassRfyy" target="_blank" class="block neu-border p-2 bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+                  <i class="fa-brands fa-github fa-xl text-black"></i>
                 </a>
               </li>
             </ul>
             <a
-              class="btn-contact shadow-gray-600 shadow-md md:text-lg text-center mx-4 lg:mx-0 lg:w-auto p-3 rounded-full font-medium text-slate-800 transition duration-200 ease-in-out border-2 hover:outline-offset-4 hover:border-cyan-400 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 hover:text-white"
+              class="btn-contact neu-border bg-red-500 text-white px-6 py-3 font-bold shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all"
               href="https://drive.google.com/file/d/10-aZwkCA4Mi9k9nNqi8IxhR_OReFS6xz/view?usp=sharing"
               target="_blank"
-              >Download CV</a
-            >
+            >Download CV</a>
           </div>
         </div>
-        <svg class="w-full absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#334155"
-            fill-opacity="1"
-            d="M0,0L20,10.7C40,21,80,43,120,64C160,85,200,107,240,128C280,149,320,171,360,170.7C400,171,440,149,480,149.3C520,149,560,171,600,192C640,213,680,235,720,213.3C760,192,800,128,840,96C880,64,920,64,960,85.3C1000,107,1040,149,1080,186.7C1120,224,1160,256,1200,245.3C1240,235,1280,181,1320,154.7C1360,128,1400,128,1420,128L1440,128L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
-          ></path>
-        </svg>
       </section>
-      <section id="about" class="bg-slate-700 px-5 py-10 lg:py-24">
-        <div class="mx-auto" data-aos="fade-down" data-aos-duration="800">
-          <h1 class="mb-12 text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">About Me</h1>
-          <div class="flex flex-col lg:flex-row justify-center mx-auto md:max-w-xl lg:max-w-none">
-            <div class="mx-10 max-w-xl">
-              <p class="text-slate-400 lg:text-xl indent-6 text-justify">
+      
+      <section id="about" class="bg-yellow-400 px-5 py-20 neu-border border-y-4 border-black">
+        <div class="container mx-auto" data-aos="fade-down" data-aos-duration="800">
+          <h1 class="mb-12 text-3xl font-bold text-center bg-red-500 text-white neu-border inline-block px-6 py-2 shadow-[5px_5px_0px_0px_#111111] mx-auto">About Me</h1>
+          <div class="flex flex-col lg:flex-row justify-center mx-auto md:max-w-xl lg:max-w-none gap-8">
+            <div class="mx-auto lg:mx-10 max-w-xl neu-border p-6 bg-white shadow-[5px_5px_0px_0px_#111111]">
+              <p class="text-black lg:text-xl indent-6 text-justify">
                 Hello there! I'm Muhammad Dimas Rafi, I am a student at Universitas Siliwangi with a focus on fullstack web development. I specialize in using Laravel to build dynamic and efficient web applications, continually expanding my
                 skills and knowledge in the field.
               </p>
             </div>
 
-            <div class="mx-10 max-w-xl">
-              <h3 class="lg:text-xl mb-5 font-semibold text-slate-300">Continuous Learning</h3>
-              <p class="text-slate-400 lg:text-xl text-justify">
+            <div class="mx-auto lg:mx-10 max-w-xl neu-border p-6 bg-white shadow-[5px_5px_0px_0px_#111111] mt-8 lg:mt-0">
+              <h3 class="lg:text-xl mb-5 font-semibold text-black bg-yellow-400 inline-block px-2">Continuous Learning</h3>
+              <p class="text-black lg:text-xl text-justify">
                 Web development is an ever-evolving field, and I am committed to staying up-to-date with the latest trends and technologies. I eagerly embrace new challenges, seeking opportunities to grow both personally and professionally.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section id="myskills" class="px-5 py-10 lg:py-24">
-        <h2 class="mb-6 lg:mb-12 text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">My Skills</h2>
-        <div class="flex flex-wrap justify-center max-w-sm lg:max-w-full mx-auto">
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/html.svg" alt="HTML" />
-            <p>HTML</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/css.svg" alt="CSS" />
-            <p>CSS</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/javascript.svg" alt="Javascript" />
-            <p>Javascript</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/react.svg" alt="Javascript" />
-            <p>React</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/typescript.png" alt="Javascript" />
-            <p>Typescript</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <svg width="48px" height="48px" viewBox="-4 0 264 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <g>
-                  <path
-                    d="M255.855641,59.619717 C255.950565,59.9710596 256,60.3333149 256,60.6972536 L256,117.265345 C256,118.743206 255.209409,120.108149 253.927418,120.843385 L206.448786,148.178786 L206.448786,202.359798 C206.448786,203.834322 205.665123,205.195421 204.386515,205.937838 L105.27893,262.990563 C105.05208,263.119455 104.804608,263.201946 104.557135,263.289593 C104.464333,263.320527 104.376687,263.377239 104.278729,263.403017 C103.585929,263.58546 102.857701,263.58546 102.164901,263.403017 C102.051476,263.372083 101.948363,263.310215 101.840093,263.26897 C101.613244,263.186479 101.376082,263.1143 101.159544,262.990563 L2.07258227,205.937838 C0.7913718,205.201819 0,203.837372 0,202.359798 L0,32.6555248 C0,32.2843161 0.0515567729,31.9234187 0.144358964,31.5728326 C0.175293028,31.454252 0.24747251,31.3459828 0.288717928,31.2274022 C0.366053087,31.0108638 0.438232569,30.7891697 0.55165747,30.5880982 C0.628992629,30.4540506 0.742417529,30.3457814 0.83521972,30.2220451 C0.953800298,30.0570635 1.06206952,29.8869261 1.20127281,29.7425672 C1.31985339,29.6239866 1.4745237,29.5363401 1.60857131,29.4332265 C1.75808595,29.3094903 1.89213356,29.1754427 2.06227091,29.0774848 L2.06742659,29.0774848 L51.6134853,0.551122364 C52.8901903,-0.183535768 54.4613221,-0.183535768 55.7380271,0.551122364 L105.284086,29.0774848 L105.294397,29.0774848 C105.459379,29.1805983 105.598582,29.3094903 105.748097,29.4280708 C105.882144,29.5311844 106.031659,29.6239866 106.15024,29.7374115 C106.294599,29.8869261 106.397712,30.0570635 106.521448,30.2220451 C106.609095,30.3457814 106.727676,30.4540506 106.799855,30.5880982 C106.918436,30.7943253 106.985459,31.0108638 107.06795,31.2274022 C107.109196,31.3459828 107.181375,31.454252 107.212309,31.5779883 C107.307234,31.9293308 107.355765,32.2915861 107.356668,32.6555248 L107.356668,138.651094 L148.643332,114.878266 L148.643332,60.6920979 C148.643332,60.3312005 148.694889,59.9651474 148.787691,59.619717 C148.823781,59.4959808 148.890804,59.3877116 148.93205,59.269131 C149.014541,59.0525925 149.08672,58.8308984 149.200145,58.629827 C149.27748,58.4957794 149.390905,58.3875102 149.478552,58.2637739 C149.602288,58.0987922 149.705401,57.9286549 149.84976,57.7842959 C149.968341,57.6657153 150.117856,57.5780688 150.251903,57.4749553 C150.406573,57.351219 150.540621,57.2171714 150.705603,57.1192136 L150.710758,57.1192136 L200.261973,28.5928511 C201.538395,27.8571345 203.110093,27.8571345 204.386515,28.5928511 L253.932573,57.1192136 C254.107866,57.2223271 254.241914,57.351219 254.396584,57.4697996 C254.525476,57.5729132 254.674991,57.6657153 254.793572,57.7791402 C254.93793,57.9286549 255.041044,58.0987922 255.16478,58.2637739 C255.257582,58.3875102 255.371007,58.4957794 255.443187,58.629827 C255.561767,58.8308984 255.628791,59.0525925 255.711282,59.269131 C255.757683,59.3877116 255.824707,59.4959808 255.855641,59.619717 Z M247.740605,114.878266 L247.740605,67.8378666 L230.402062,77.8192579 L206.448786,91.6106946 L206.448786,138.651094 L247.745761,114.878266 L247.740605,114.878266 Z M198.194546,199.97272 L198.194546,152.901386 L174.633101,166.357704 L107.351512,204.757188 L107.351512,252.27191 L198.194546,199.97272 Z M8.25939501,39.7961379 L8.25939501,199.97272 L99.0921175,252.266755 L99.0921175,204.762344 L51.6392637,177.906421 L51.6237967,177.89611 L51.603174,177.885798 C51.443348,177.792996 51.3093004,177.658949 51.1597857,177.545524 C51.0308938,177.44241 50.8813791,177.359919 50.7679542,177.246494 L50.7576429,177.231027 C50.6235953,177.102135 50.5307931,176.942309 50.4173682,176.79795 C50.3142546,176.658747 50.1905184,176.540167 50.1080276,176.395808 L50.1028719,176.380341 C50.0100697,176.22567 49.9533572,176.040066 49.8863334,175.864773 C49.8193096,175.710103 49.7316631,175.565744 49.6904177,175.400762 L49.6904177,175.395606 C49.6388609,175.19969 49.6285496,174.993463 49.6079269,174.792392 C49.5873041,174.637722 49.5460587,174.483051 49.5460587,174.328381 L49.5460587,174.31807 L49.5460587,63.5689658 L25.5979377,49.7723734 L8.25939501,39.8012935 L8.25939501,39.7961379 Z M53.6809119,8.89300821 L12.3994039,32.6555248 L53.6706006,56.4180414 L94.9469529,32.6503692 L53.6706006,8.89300821 L53.6809119,8.89300821 Z M75.1491521,157.19091 L99.0972731,143.404629 L99.0972731,39.7961379 L81.7587304,49.7775291 L57.8054537,63.5689658 L57.8054537,167.177457 L75.1491521,157.19091 Z M202.324244,36.934737 L161.047891,60.6972536 L202.324244,84.4597702 L243.59544,60.6920979 L202.324244,36.934737 Z M198.194546,91.6106946 L174.24127,77.8192579 L156.902727,67.8378666 L156.902727,114.878266 L180.850848,128.664547 L198.194546,138.651094 L198.194546,91.6106946 Z M103.216659,197.616575 L163.759778,163.052915 L194.023603,145.781396 L152.778185,122.034346 L105.289242,149.374903 L62.0073307,174.292291 L103.216659,197.616575 Z"
-                    fill="#FF2D20"
-                  ></path>
+      
+      <section id="myskills" class="px-5 py-20 bg-white">
+        <div class="container mx-auto">
+          <h2 class="mb-12 text-3xl font-bold text-center bg-yellow-400 neu-border inline-block px-6 py-2 shadow-[5px_5px_0px_0px_#111111] mx-auto">My Skills</h2>
+          <div class="flex flex-wrap justify-center max-w-sm lg:max-w-full mx-auto gap-4">
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/html.svg" alt="HTML" class="w-16 h-16" />
+              <p class="mt-2 font-bold">HTML</p>
+            </div>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/css.svg" alt="CSS" class="w-16 h-16" />
+              <p class="mt-2 font-bold">CSS</p>
+            </div>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/javascript.svg" alt="Javascript" class="w-16 h-16" />
+              <p class="mt-2 font-bold">Javascript</p>
+            </div>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/react.svg" alt="React" class="w-16 h-16" />
+              <p class="mt-2 font-bold">React</p>
+            </div>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/typescript.png" alt="Typescript" class="w-16 h-16" />
+              <p class="mt-2 font-bold">Typescript</p>
+            </div>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <svg width="64px" height="64px" viewBox="-4 0 264 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      d="M255.855641,59.619717 C255.950565,59.9710596 256,60.3333149 256,60.6972536 L256,117.265345 C256,118.743206 255.209409,120.108149 253.927418,120.843385 L206.448786,148.178786 L206.448786,202.359798 C206.448786,203.834322 205.665123,205.195421 204.386515,205.937838 L105.27893,262.990563 C105.05208,263.119455 104.804608,263.201946 104.557135,263.289593 C104.464333,263.320527 104.376687,263.377239 104.278729,263.403017 C103.585929,263.58546 102.857701,263.58546 102.164901,263.403017 C102.051476,263.372083 101.948363,263.310215 101.840093,263.26897 C101.613244,263.186479 101.376082,263.1143 101.159544,262.990563 L2.07258227,205.937838 C0.7913718,205.201819 0,203.837372 0,202.359798 L0,32.6555248 C0,32.2843161 0.0515567729,31.9234187 0.144358964,31.5728326 C0.175293028,31.454252 0.24747251,31.3459828 0.288717928,31.2274022 C0.366053087,31.0108638 0.438232569,30.7891697 0.55165747,30.5880982 C0.628992629,30.4540506 0.742417529,30.3457814 0.83521972,30.2220451 C0.953800298,30.0570635 1.06206952,29.8869261 1.20127281,29.7425672 C1.31985339,29.6239866 1.4745237,29.5363401 1.60857131,29.4332265 C1.75808595,29.3094903 1.89213356,29.1754427 2.06227091,29.0774848 L2.06742659,29.0774848 L51.6134853,0.551122364 C52.8901903,-0.183535768 54.4613221,-0.183535768 55.7380271,0.551122364 L105.284086,29.0774848 L105.294397,29.0774848 C105.459379,29.1805983 105.598582,29.3094903 105.748097,29.4280708 C105.882144,29.5311844 106.031659,29.6239866 106.15024,29.7374115 C106.294599,29.8869261 106.397712,30.0570635 106.521448,30.2220451 C106.609095,30.3457814 106.727676,30.4540506 106.799855,30.5880982 C106.918436,30.7943253 106.985459,31.0108638 107.06795,31.2274022 C107.109196,31.3459828 107.181375,31.454252 107.212309,31.5779883 C107.307234,31.9293308 107.355765,32.2915861 107.356668,32.6555248 L107.356668,138.651094 L148.643332,114.878266 L148.643332,60.6920979 C148.643332,60.3312005 148.694889,59.9651474 148.787691,59.619717 C148.823781,59.4959808 148.890804,59.3877116 148.93205,59.269131 C149.014541,59.0525925 149.08672,58.8308984 149.200145,58.629827 C149.27748,58.4957794 149.390905,58.3875102 149.478552,58.2637739 C149.602288,58.0987922 149.705401,57.9286549 149.84976,57.7842959 C149.968341,57.6657153 150.117856,57.5780688 150.251903,57.4749553 C150.406573,57.351219 150.540621,57.2171714 150.705603,57.1192136 L150.710758,57.1192136 L200.261973,28.5928511 C201.538395,27.8571345 203.110093,27.8571345 204.386515,28.5928511 L253.932573,57.1192136 C254.107866,57.2223271 254.241914,57.351219 254.396584,57.4697996 C254.525476,57.5729132 254.674991,57.6657153 254.793572,57.7791402 C254.93793,57.9286549 255.041044,58.0987922 255.16478,58.2637739 C255.257582,58.3875102 255.371007,58.4957794 255.443187,58.629827 C255.561767,58.8308984 255.628791,59.0525925 255.711282,59.269131 C255.757683,59.3877116 255.824707,59.4959808 255.855641,59.619717 Z M247.740605,114.878266 L247.740605,67.8378666 L230.402062,77.8192579 L206.448786,91.6106946 L206.448786,138.651094 L247.745761,114.878266 L247.740605,114.878266 Z M198.194546,199.97272 L198.194546,152.901386 L174.633101,166.357704 L107.351512,204.757188 L107.351512,252.27191 L198.194546,199.97272 Z M8.25939501,39.7961379 L8.25939501,199.97272 L99.0921175,252.266755 L99.0921175,204.762344 L51.6392637,177.906421 L51.6237967,177.89611 L51.603174,177.885798 C51.443348,177.792996 51.3093004,177.658949 51.1597857,177.545524 C51.0308938,177.44241 50.8813791,177.359919 50.7679542,177.246494 L50.7576429,177.231027 C50.6235953,177.102135 50.5307931,176.942309 50.4173682,176.79795 C50.3142546,176.658747 50.1905184,176.540167 50.1080276,176.395808 L50.1028719,176.380341 C50.0100697,176.22567 49.9533572,176.040066 49.8863334,175.864773 C49.8193096,175.710103 49.7316631,175.565744 49.6904177,175.400762 L49.6904177,175.395606 C49.6388609,175.19969 49.6285496,174.993463 49.6079269,174.792392 C49.5873041,174.637722 49.5460587,174.483051 49.5460587,174.328381 L49.5460587,174.31807 L49.5460587,63.5689658 L25.5979377,49.7723734 L8.25939501,39.8012935 L8.25939501,39.7961379 Z M53.6809119,8.89300821 L12.3994039,32.6555248 L53.6706006,56.4180414 L94.9469529,32.6503692 L53.6706006,8.89300821 L53.6809119,8.89300821 Z M75.1491521,157.19091 L99.0972731,143.404629 L99.0972731,39.7961379 L81.7587304,49.7775291 L57.8054537,63.5689658 L57.8054537,167.177457 L75.1491521,157.19091 Z M202.324244,36.934737 L161.047891,60.6972536 L202.324244,84.4597702 L243.59544,60.6920979 L202.324244,36.934737 Z M198.194546,91.6106946 L174.24127,77.8192579 L156.902727,67.8378666 L156.902727,114.878266 L180.850848,128.664547 L198.194546,138.651094 L198.194546,91.6106946 Z M103.216659,197.616575 L163.759778,163.052915 L194.023603,145.781396 L152.778185,122.034346 L105.289242,149.374903 L62.0073307,174.292291 L103.216659,197.616575 Z"
+                      fill="#FF2D20"
+                    ></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-            <p class="mt-1">Laravel</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/tailwindcss.svg" alt="Tailwindcss" />
-            <p>Tailwindcss</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/git.svg" alt="GIT" />
-            <p>GIT</p>
-          </div>
-          <div class="skill flex flex-col items-center w-24 py-2 lg:px-5">
-            <img src="images/icon/docker.png" alt="docker" />
-            <p>Docker</p>
-          </div>
-        </div>
-      </section>
-      <section id="myproject" class="bg-slate-700 px-5 py-10 lg:py-24">
-        <h2 class="mb-10 text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-          My Projects
-        </h2>
-        <div class="flex flex-col lg:flex-row lg:flex-wrap lg:px-20 text-center items-center justify-center">
-          <div class="w-full md:w-2/3 lg:w-1/3 rounded-md py-3" data-aos="flip-left" data-aos-duration="1000">
-            <div class="px-5 py-3">
-              <a href="https://github.com/DimassRfyy/GrowHabbits-Laravel">
-                <img src="images/growhabit.png" alt="Growhabbits" class="rounded-sm object-cover hover:scale-110 transition duration-200" />
-              </a>
+              </svg>
+              <p class="mt-2 font-bold">Laravel</p>
             </div>
-            <p class="max-w-md mx-auto text-slate-400 md:text-lg">
-              Growhabbits - Website Course Online tentang pencarian dan pelatihan minat dan bakat
-            </p>
-          </div>
-          <div class="w-full md:w-2/3 lg:w-1/3 rounded-md py-3" data-aos="flip-left" data-aos-duration="1000">
-            <div class="px-5 py-3">
-              <a href="https://github.com/DimassRfyy/E-Staycation">
-                <img src="images/e-staycation.jpeg" alt="E-Staycation" class="rounded-sm object-cover hover:scale-110 transition duration-200" />
-              </a>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/tailwindcss.svg" alt="Tailwindcss" class="w-16 h-16" />
+              <p class="mt-2 font-bold">Tailwindcss</p>
             </div>
-            <p class="max-w-md mx-auto text-slate-400 md:text-lg">
-              E-Staycation - Aplikasi Website layanan pemesanan kamar hotel dan kebutuhan liburan lainnya
-            </p>
-          </div>
-          <div class="w-full md:w-2/3 lg:w-1/3 py-3" data-aos="flip-left" data-aos-duration="1000">
-            <div class="px-5 py-3">
-              <a href="https://github.com/DimassRfyy/KosKita">
-                <img src="images/koskita.jpeg" alt="KosKita" class="rounded-sm object-cover hover:scale-110 transition duration-200" />
-              </a>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/git.svg" alt="GIT" class="w-16 h-16" />
+              <p class="mt-2 font-bold">GIT</p>
             </div>
-            <p class="max-w-md mx-auto text-slate-400 md:text-lg">
-              KosKita - Boarding house booking platform with Midtrans payment gateway
-            </p>
+            <div class="skill flex flex-col items-center w-32 py-4 px-4 neu-border bg-white shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              <img src="images/icon/docker.png" alt="docker" class="w-16 h-16" />
+              <p class="mt-2 font-bold">Docker</p>
+            </div>
           </div>
-        </div>
-        <div class="flex justify-center mt-8" data-aos="zoom-in" data-aos-duration="1000">
-          <a href="https://github.com/DimassRfyy" target="_blank"
-            class="p-3 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition duration-200 shadow-md">
-            🔥 Lihat 30+ lainnya di GitHub →
-          </a>
         </div>
       </section>
       
-      <section id="certificate" class="px-5 py-10 lg:py-24">
-        <h2 class="mb-6 lg:mb-12 text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Certificate</h2>
-        <div class="flex flex-col lg:flex-row items-center justify-center lg:px-20">
-          <div class="w-full lg:w-1/3 px-5 mb-6 lg:mb-0" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="images/rakamin-certificate.png" alt="" class="w-80 md:w-2/3 mx-auto lg:w-auto lg:h-72 hover:scale-110 transition duration-200" />
+      <section id="myproject" class="bg-red-500 px-5 py-20 neu-border border-y-4 border-black">
+        <div class="container mx-auto">
+          <h2 class="mb-12 text-3xl font-bold text-center bg-white text-black neu-border inline-block px-6 py-2 shadow-[5px_5px_0px_0px_#111111] mx-auto">
+            My Projects
+          </h2>
+          <div class="flex flex-col lg:flex-row lg:flex-wrap lg:px-20 text-center items-center justify-center gap-8">
+            <div class="w-full md:w-2/3 lg:w-1/3 rounded-md" data-aos="flip-left" data-aos-duration="1000">
+              <div class="neu-border bg-white p-4 shadow-[5px_5px_0px_0px_#111111]">
+                <a href="https://github.com/DimassRfyy/GrowHabbits-Laravel" class="block">
+                  <img src="images/growhabit.png" alt="Growhabbits" class="neu-border object-cover hover:scale-105 transition duration-200" />
+                </a>
+                <p class="max-w-md mx-auto text-black md:text-lg mt-4 font-bold">
+                  Growhabbits - Website Course Online tentang pencarian dan pelatihan minat dan bakat
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3 lg:w-1/3 rounded-md" data-aos="flip-left" data-aos-duration="1000">
+              <div class="neu-border bg-white p-4 shadow-[5px_5px_0px_0px_#111111]">
+                <a href="https://github.com/DimassRfyy/E-Staycation" class="block">
+                  <img src="images/e-staycation.jpeg" alt="E-Staycation" class="neu-border object-cover hover:scale-105 transition duration-200" />
+                </a>
+                <p class="max-w-md mx-auto text-black md:text-lg mt-4 font-bold">
+                  E-Staycation - Aplikasi Website layanan pemesanan kamar hotel dan kebutuhan liburan lainnya
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3 lg:w-1/3" data-aos="flip-left" data-aos-duration="1000">
+              <div class="neu-border bg-white p-4 shadow-[5px_5px_0px_0px_#111111]">
+                <a href="https://github.com/DimassRfyy/KosKita" class="block">
+                  <img src="images/koskita.jpeg" alt="KosKita" class="neu-border object-cover hover:scale-105 transition duration-200" />
+                </a>
+                <p class="max-w-md mx-auto text-black md:text-lg mt-4 font-bold">
+                  KosKita - Boarding house booking platform with Midtrans payment gateway
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="w-full lg:w-1/3 px-5 mb-6 lg:mb-0" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="images/sertif3.jpg" alt="" class="w-80 md:w-2/3 mx-auto lg:w-auto lg:h-72 hover:scale-110 transition duration-200" />
-          </div>
-          <div class="w-full lg:w-1/3 px-5 hover:scale-150" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="images/TAU-certificate.png" alt="" class="w-80 md:w-2/3 mx-auto lg:w-auto lg:h-72 hover:scale-110 transition duration-200" />
+          <div class="flex justify-center mt-12" data-aos="zoom-in" data-aos-duration="1000">
+            <a href="https://github.com/DimassRfyy" target="_blank"
+              class="neu-border bg-yellow-400 px-6 py-4 font-bold shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">
+              🔥 Lihat 30+ lainnya di GitHub →
+            </a>
           </div>
         </div>
       </section>
-      <section id="contact" class="bg-slate-700 px-5 py-10 lg:py-24">
-        <h2 class="mb-12 text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Contact Me</h2>
-        <form action="#" method="post" class="w-full md:w-2/3 lg:w-1/3 mx-auto" data-aos="zoom-in-up" data-aos-duration="1000">
-          <label for="name" class="block text-slate-100">Name</label>
-          <input type="text" id="name" class="w-full p-2 border-2 rounded-sm outline-cyan-400" />
-          <label for="email" class="block mt-3 text-slate-100">Email</label>
-          <input type="email" id="email" name="email" class="w-full p-2 border-2 rounded-sm outline-cyan-400" />
-          <label for="message" class="mt-3 block text-slate-100">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10" class="w-full border-2 px-2 rounded-sm outline-cyan-400"></textarea>
-          <button id="btn-submit" class="bg-gradient-to-tr from-cyan-400 to bg-blue-600 rounded-md p-3 w-full text-white font-bold my-5">Submit</button>
-        </form>
+      
+      <section id="certificate" class="px-5 py-20 bg-white">
+        <div class="container mx-auto">
+          <h2 class="mb-12 text-3xl font-bold text-center bg-red-500 text-white neu-border inline-block px-6 py-2 shadow-[5px_5px_0px_0px_#111111] mx-auto">Certificates</h2>
+          <div class="flex flex-col lg:flex-row items-center justify-center lg:px-20 gap-8">
+            <div class="w-full lg:w-1/3" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="neu-border p-4 bg-white shadow-[5px_5px_0px_0px_#111111]">
+                <img src="images/rakamin-certificate.png" alt="Rakamin Certificate" class="w-full hover:scale-105 transition duration-200 neu-border" />
+              </div>
+            </div>
+            <div class="w-full lg:w-1/3" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="neu-border p-4 bg-white shadow-[5px_5px_0px_0px_#111111]">
+                <img src="images/sertif3.jpg" alt="Certificate" class="w-full hover:scale-105 transition duration-200 neu-border" />
+              </div>
+            </div>
+            <div class="w-full lg:w-1/3" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="neu-border p-4 bg-white shadow-[5px_5px_0px_0px_#111111]">
+                <img src="images/TAU-certificate.png" alt="TAU Certificate" class="w-full hover:scale-105 transition duration-200 neu-border" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact" class="bg-yellow-400 px-5 py-20 neu-border border-y-4 border-black">
+        <div class="container mx-auto">
+          <h2 class="mb-12 text-3xl font-bold text-center bg-red-500 text-white neu-border inline-block px-6 py-2 shadow-[5px_5px_0px_0px_#111111] mx-auto">Contact Me</h2>
+          <form action="#" method="post" class="w-full md:w-2/3 lg:w-1/3 mx-auto neu-border p-6 bg-white shadow-[5px_5px_0px_0px_#111111]" data-aos="zoom-in-up" data-aos-duration="1000">
+            <label for="name" class="block text-black font-bold mb-2">Name</label>
+            <input type="text" id="name" class="w-full p-3 neu-border outline-none focus:bg-yellow-400 transition-colors" />
+            
+            <label for="email" class="block mt-6 text-black font-bold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 neu-border outline-none focus:bg-yellow-400 transition-colors" />
+            
+            <label for="message" class="mt-6 block text-black font-bold mb-2">Message</label>
+            <textarea name="message" id="message" rows="6" class="w-full neu-border p-3 outline-none focus:bg-yellow-400 transition-colors"></textarea>
+            
+            <button id="btn-submit" class="neu-border bg-red-500 text-white font-bold p-4 w-full mt-6 shadow-[5px_5px_0px_0px_#111111] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all">Submit</button>
+          </form>
+        </div>
       </section>
     </main>
-    <footer class="p-2 bg-gradient-to-r from-cyan-400 to bg-blue-600">
-      <p class="text-center text-slate-800">
+    
+    <footer class="p-4 bg-black text-white neu-border border-t-4">
+      <p class="text-center">
         Created with ☕ by
-        <span class="font-light text"><i>Dimas Rafi</i></span>
+        <span class="font-bold bg-red-500 px-2 py-1 neu-border inline-block">Dimas Rafi</span>
       </p>
     </footer>
 
@@ -265,6 +297,7 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- My script -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+    </script>
   </body>
 </html>

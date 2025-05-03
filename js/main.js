@@ -4,9 +4,9 @@ window.onscroll = function () {
   const fixedNavbar = header.offsetTop;
 
   if (window.scrollY > fixedNavbar) {
-    header.classList.add('border-b-2', 'rounded-b-sm');
+    header.classList.add('shadow-[8px_8px_0px_0px_#111111]');
   } else {
-    header.classList.remove('border-b-2', 'rounded-b-sm');
+    header.classList.remove('shadow-[8px_8px_0px_0px_#111111]');
   }
 };
 
@@ -23,11 +23,13 @@ navlink.forEach((item) => {
 
 // handle button contact click
 const btnContact = document.querySelector('.btn-contact');
-btnContact.addEventListener('click', () => {
-  navlink.forEach((item) => {
-    item.classList.remove('active');
+if (btnContact) {
+  btnContact.addEventListener('click', () => {
+    navlink.forEach((item) => {
+      item.classList.remove('active');
+    });
   });
-});
+}
 
 // handle menu icon click
 const menu = document.querySelector('.menu');
@@ -35,26 +37,28 @@ menu.addEventListener('click', () => {
   const menuMobile = document.querySelector('#menuMobile');
   console.log('ok');
   menu.classList.add('hidden');
-  menuMobile.classList.remove('-ms-72', 'md:-ms-[600px]');
-  menuMobile.classList.add('ms-0');
+  menuMobile.classList.remove('transform', '-translate-x-full');
+  menuMobile.classList.add('translate-x-0');
 });
 
 // handle close icon click
 const closed = document.querySelector('.close');
 closed.addEventListener('click', () => {
   const menuMobile = document.querySelector('#menuMobile');
+  const menu = document.querySelector('.menu');
 
   setTimeout(() => {
     menu.classList.remove('hidden');
   }, 300);
 
-  menuMobile.classList.remove('ms-0');
-  menuMobile.classList.add('-ms-72', 'md:-ms-[600px]');
+  menuMobile.classList.remove('translate-x-0');
+  menuMobile.classList.add('transform', '-translate-x-full');
 });
 
 // handle form submit
 const submit = document.querySelector('#btn-submit');
-submit.addEventListener('click', () => {
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
   const name = document.querySelector('#name').value;
   const email = document.querySelector('#email').value;
   const message = document.querySelector('#message').value;
@@ -81,7 +85,6 @@ gsap.from('.text', {
 });
 
 // AOS
-
 const skills = document.querySelectorAll('.skill');
 skills.forEach((skill, i) => {
   skill.dataset.aos = 'fade-down';
