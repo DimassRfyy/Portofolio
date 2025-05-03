@@ -63,7 +63,7 @@ submit.addEventListener('click', (e) => {
   const email = document.querySelector('#email').value;
   const message = document.querySelector('#message').value;
   const result = window.open(
-    `https://api.whatsapp.com/send?phone=6281384528791&text=Nama saya: ${name},
+    `https://api.whatsapp.com/send?phone=6282130869378&text=Nama saya: ${name},
     Email : ${email}, ${message}`
   );
   result ? result.focus() : alert('Please allow popups for this website');
