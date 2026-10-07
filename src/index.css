@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "kern" 1, "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 340;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar matching editorial style */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+}
+
+@layer components {
+  /* Editorial Typography Presets calibrated for balanced mobile & desktop */
+  .display-xl {
+    font-size: clamp(26px, 4.2vw, 54px);
+    font-weight: 340;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .display-lg {
+    font-size: clamp(22px, 3.2vw, 40px);
+    font-weight: 340;
+    line-height: 1.20;
+    letter-spacing: -0.015em;
+  }
+
+  .headline-editorial {
+    font-size: clamp(17px, 2.2vw, 24px);
+    font-weight: 540;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead-editorial {
+    font-size: clamp(14px, 1.6vw, 18px);
+    font-weight: 340;
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+  }
+
+  .eyebrow-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(11px, 1.1vw, 13px);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .caption-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Signature Pill Buttons */
+  .btn-pill-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 480;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+  @media (min-width: 640px) {
+    .btn-pill-primary {
+      font-size: 15px;
+      padding: 9px 22px;
+    }
+  }
+  .btn-pill-primary:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  .btn-pill-primary:active {
+    transform: translateY(0px) scale(0.98);
+  }
+
+  .btn-pill-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 480;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (min-width: 640px) {
+    .btn-pill-secondary {
+      font-size: 15px;
+      padding: 9px 20px;
+    }
+  }
+  .btn-pill-secondary:hover {
+    background-color: #f7f7f5;
+    transform: translateY(-1px) scale(1.02);
+  }
+  .btn-pill-secondary:active {
+    transform: translateY(0px) scale(0.98);
+  }
+
+  .btn-pill-magenta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ff3d8b;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+  }
+  @media (min-width: 640px) {
+    .btn-pill-magenta {
+      font-size: 14px;
+      padding: 8px 18px;
+    }
+  }
+  .btn-pill-magenta:hover {
+    background-color: #e62e78;
+    transform: scale(1.03);
+  }
+
+  .btn-icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background-color: #f7f7f5;
+    color: #000000;
+    border: 1px solid #e6e6e6;
+    transition: all 0.2s ease;
+  }
+  .btn-icon-circle:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-2px);
+  }
+
+  /* Hairline borders */
+  .border-hairline {
+    border-color: #e6e6e6;
+  }
+  .border-hairline-soft {
+    border-color: #f1f1f1;
+  }
+}
