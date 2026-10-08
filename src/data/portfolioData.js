@@ -158,7 +158,7 @@ export const portfolioData = {
     {
       id: "magang-kominfo",
       title: "Diskominfo Jawa Timur",
-      issuer: "Diskominfo Provinsi Jawa Timur",
+      issuer: "Diskominfo Jawa Timur",
       date: "Certified 2026",
       image: "/images/sertif-kominfo.jpg",
       description: "Sertifikat resmi penyelesaian Program Magang Bidang Aplikasi Informatika di Dinas Komunikasi dan Informatika Jawa Timur pada proyek Majadigi dengan predikat BAIK.",
@@ -187,12 +187,12 @@ export const portfolioData = {
   experiences: [
     {
       role: "Web Specialist",
-      organization: "salonkita®️",
+      organization: "PT. Salonkita Indonesia",
       period: "Apr 2025 — Saat ini",
       location: "Indonesia · Magang",
       website: "",
       linkedin: "https://www.linkedin.com/in/muhammad-dimas-rafi-8b221b33a/",
-      description: "Web Specialist pada platform salonkita®️, bertanggung jawab dalam pengembangan dan pemeliharaan antarmuka web, memastikan tampilan responsif, modern, dan performa optimal.",
+      description: "Web Specialist pada PT. Salonkita Indonesia, bertanggung jawab dalam pengembangan dan pemeliharaan antarmuka web, memastikan tampilan responsif, modern, dan performa optimal.",
       responsibilities: [
         "Mengembangkan dan merancang tata letak antarmuka web yang responsif menggunakan HTML dan Tailwind CSS.",
         "Memelihara konsistensi desain sistem antarmuka serta meningkatkan pengalaman pengguna (UX) secara menyeluruh.",

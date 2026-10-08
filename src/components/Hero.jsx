@@ -186,7 +186,7 @@ export default function Hero() {
                       <p className="text-[10px] font-mono text-block-lime uppercase">Fullstack Dev</p>
                     </div>
                     <span className="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono border border-white/30">
-                      ID 🇮🇩
+                      ID
                     </span>
                   </div>
                 </div>
