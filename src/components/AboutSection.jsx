@@ -25,7 +25,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-8 sm:py-14 md:py-18 bg-canvas">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         {/* Signature Lilac Color Block Section */}
         <div className="bg-block-lilac text-ink rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 border border-black/10 shadow-sm relative overflow-hidden">

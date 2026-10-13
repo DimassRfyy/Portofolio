@@ -30,7 +30,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Column: Editorial Headline & Copy */}
@@ -78,7 +78,7 @@ export default function Hero() {
 
               <button
                 onClick={() => scrollTo('contact')}
-                className="btn-pill-magenta"
+                className="hidden sm:inline-flex btn-pill-magenta"
               >
                 <Sparkles size={13} />
                 <span>Available for Hire</span>

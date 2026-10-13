@@ -27,7 +27,7 @@ export default function InteractivePlayground() {
 
   return (
     <section className="py-8 sm:py-12 bg-canvas">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         <div className="bg-surface-soft rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 border border-hairline relative overflow-hidden">
           {/* Header */}
