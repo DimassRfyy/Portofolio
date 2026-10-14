@@ -62,7 +62,7 @@ export default function Navbar() {
           scrolled ? 'border-hairline shadow-sm py-3' : 'border-transparent py-4'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo / Brand */}
           <a
             href="#home"

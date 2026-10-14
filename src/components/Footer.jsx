@@ -42,8 +42,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-canvas border-t border-hairline py-10 sm:py-14 px-4 sm:px-6 lg:px-12 xl:px-16">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-canvas border-t border-hairline py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-10 pb-8 sm:pb-10 border-b border-hairline">
           
           {/* Brand & Bio */}
